@@ -28,3 +28,9 @@ jobs:
     - name: Run Model Tests (Verify Model)
       run: |
         python test_model.py
+        
+    - name: Save Model Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: trained-rf-model
+        path: rf_model.pkl
